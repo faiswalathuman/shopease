@@ -650,3 +650,140 @@ button {
     padding: 35px 6%;
   }
 }
+```css
+/* ShopEase premium legal pages and shared footer */
+
+.legal-page {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 76px 0 88px;
+  color: var(--text, #263431);
+  line-height: 1.8;
+}
+
+.legal-page > .eyebrow {
+  color: var(--teal, #477d70);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.legal-page h1 {
+  margin: 12px 0 16px;
+  color: var(--navy, #142b2a);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.12;
+}
+
+.legal-page h1 em {
+  color: var(--teal, #477d70);
+  font-weight: 400;
+}
+
+.legal-page > p {
+  margin: 18px 0;
+}
+
+.legal-page h2 {
+  margin: 38px 0 10px;
+  color: var(--navy, #142b2a);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  line-height: 1.35;
+}
+
+.legal-page h3 {
+  color: var(--navy, #142b2a);
+}
+
+.legal-page ul {
+  padding-left: 24px;
+}
+
+.legal-page li {
+  margin: 8px 0;
+}
+
+.legal-page a:not(.primary-link) {
+  color: var(--teal, #477d70);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.legal-page a:not(.primary-link):hover {
+  color: var(--gold, #c69b5b);
+}
+
+.legal-page section {
+  margin: 32px 0;
+}
+
+.legal-page .primary-link {
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin: 20px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--gold, #c69b5b);
+}
+
+.site-footer .brand {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.site-footer small {
+  display: block;
+  line-height: 1.7;
+}
+
+.site-header nav a {
+  text-underline-offset: 5px;
+}
+
+.brand span {
+  color: var(--gold, #c69b5b);
+}
+
+.contact-page section {
+  padding: 8px 0 20px;
+  border-bottom: 1px solid var(--line, #e4e6e0);
+}
+
+@media (max-width: 700px) {
+  .legal-page {
+    width: calc(100% - 32px);
+    padding: 48px 0 60px;
+  }
+
+  .site-header {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+
+  .footer-links {
+    gap: 14px 18px;
+  }
+}
+```
