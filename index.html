@@ -4,119 +4,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShopEase | Online Store</title>
+  <meta name="description" content="Discover useful everyday products with ShopEase.">
+  <title>ShopEase | Discover Better Everyday</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>ShopEase</h1>
-    <p>Your everyday online store</p>
-    <button id="cart-button">
+
+  <div class="announcement">
+    THOUGHTFUL FINDS FOR EVERYDAY LIFE
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home">Shop<span>Ease</span></a>
+
+    <nav>
+      <a href="#products">Discover</a>
+      <a href="#about">About Us</a>
+      <a href="#disclosure">Affiliate Disclosure</a>
+    </nav>
+
+    <button id="cart-button" type="button">
       🛒 Cart (<span id="cart-count">0</span>)
     </button>
   </header>
 
-  <main>
+  <main id="home">
+
     <section class="hero">
-      <h2>Discover Your Next Favorite</h2>
-      <p>Explore products you'll love.</p>
+      <div class="hero-copy">
+        <p class="eyebrow">THE EVERYDAY EDIT</p>
+        <h1>Good finds.<br><em>Better everyday.</em></h1>
+
+        <p>
+          Discover useful ideas for your style, routine and everyday life.
+          We are building a thoughtful collection of products worth exploring.
+        </p>
+
+        <a class="primary-link" href="#products">
+          Explore the collection →
+        </a>
+
+        <p class="hero-note">
+          An independent product discovery website.
+        </p>
+      </div>
+
+      <div class="hero-art" aria-label="ShopEase brand illustration">
+        <div class="art-circle">
+          <span>SE</span>
+        </div>
+        <p>DISCOVER SOMETHING GOOD ✦</p>
+      </div>
     </section>
 
-    <section>
-      <h2>Featured Products</h2>
+    <section class="benefits">
+      <div>
+        <span>✦</span>
+        <h3>Discover</h3>
+        <p>Explore useful product ideas.</p>
+      </div>
+      <div>
+        <span>◇</span>
+        <h3>Explore</h3>
+        <p>Learn about products before choosing.</p>
+      </div>
+      <div>
+        <span>♡</span>
+        <h3>Choose thoughtfully</h3>
+        <p>Find what suits your needs.</p>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <p class="eyebrow">THE SHOPEASE PREVIEW</p>
+        <h2>Explore the <em>collection.</em></h2>
+        <p>
+          These are demonstration products used to test this website.
+          They are not verified AliExpress listings or current market prices.
+        </p>
+      </div>
+
+      <div class="demo-notice">
+        <strong>Preview store:</strong>
+        Product names, descriptions and prices are examples only.
+        Verified product details and affiliate links will be added later.
+      </div>
+
       <div id="product-list" class="products"></div>
     </section>
 
-    <section class="cart-section">
-      <h2>Your Shopping Cart</h2>
-      <div id="cart-items">Your cart is empty.</div>
-      <h3>Total: <span id="cart-total">TSh 0</span></h3>
+    <section class="about-section" id="about">
+      <p class="eyebrow">GET TO KNOW US</p>
+      <h2>Shopping discovery,<br><em>made a little easier.</em></h2>
+
+      <p>
+        ShopEase is an independent product-discovery project designed to
+        help visitors explore useful products for everyday life.
+        Our goal is to provide clear information and make discovering
+        interesting products easier.
+      </p>
+
+      <p>
+        We are currently preparing our collection. The products shown
+        on this preview website are examples and should not be treated
+        as live offers.
+      </p>
     </section>
+
+    <section class="disclosure-section" id="disclosure">
+      <h2>Affiliate Disclosure</h2>
+
+      <p>
+        ShopEase may earn a commission when visitors purchase products
+        through qualifying affiliate links, at no additional cost to them.
+        We will identify affiliate links clearly. At present, this preview
+        website does not contain verified AliExpress affiliate links.
+        Product examples and prices are for demonstration only.
+      </p>
+    </section>
+
   </main>
 
-  <footer>
-    <p>© 2026 ShopEase. Demo store.</p>
+  <aside class="cart-panel" id="cart-panel" hidden>
+    <div class="cart-heading">
+      <h2>Your Demo Cart</h2>
+      <button id="close-cart" type="button" aria-label="Close cart">×</button>
+    </div>
+
+    <p class="cart-notice">
+      This is a demonstration cart. Checkout and purchases are not available.
+    </p>
+
+    <div id="cart-items">Your cart is empty.</div>
+
+    <h3>Total: <span id="cart-total">TSh 0</span></h3>
+
+    <button id="continue-shopping" type="button">
+      Continue exploring
+    </button>
+  </aside>
+
+  <div id="cart-backdrop" class="cart-backdrop" hidden></div>
+
+  <footer class="site-footer">
+    <a class="brand" href="#home">Shop<span>Ease</span></a>
+
+    <p>Discover. Explore. Choose thoughtfully.</p>
+
+    <div>
+      <a href="#about">About Us</a>
+      <a href="#disclosure">Affiliate Disclosure</a>
+      <a href="#products">Products</a>
+    </div>
+
+    <small>
+      © 2026 ShopEase. Preview website. Demo products are for testing only.
+    </small>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-const products = [
-  { id: 1, name: "T-shirt", description: "T-shirt ya cotton", price: 25000 },
-  { id: 2, name: "Headphones", description: "Headphones za ubora", price: 45000 },
-  { id: 3, name: "Backpack", description: "Beg ya mgongoni", price: 60000 }
-];
-
-const productList = document.querySelector("#product-list");
-const cartItems = document.querySelector("#cart-items");
-const cartCount = document.querySelector("#cart-count");
-const cartTotal = document.querySelector("#cart-total");
-
-const cart = {};
-
-function formatPrice(amount) {
-  return `TSh ${amount.toLocaleString("en-TZ")}`;
-}
-
-function showProducts() {
-  products.forEach((product) => {
-    const card = document.createElement("article");
-    card.className = "product-card";
-
-    const name = document.createElement("h3");
-    name.textContent = product.name;
-
-    const description = document.createElement("p");
-    description.textContent = product.description;
-
-    const price = document.createElement("p");
-    price.textContent = formatPrice(product.price);
-
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = "Ongeza kwenye kikapu";
-    button.addEventListener("click", () => addToCart(product.id));
-
-    card.append(name, description, price, button);
-    productList.append(card);
-  });
-}
-
-function addToCart(productId) {
-  cart[productId] = (cart[productId] || 0) + 1;
-  showCart();
-}
-
-function showCart() {
-  cartItems.replaceChildren();
-
-  const cartProducts = products.filter((product) => cart[product.id]);
-
-  if (cartProducts.length === 0) {
-    cartItems.textContent = "Kikapu chako ni tupu.";
-  } else {
-    const list = document.createElement("ul");
-
-    cartProducts.forEach((product) => {
-      const quantity = cart[product.id];
-      const item = document.createElement("li");
-      item.textContent =
-        `${product.name} × ${quantity} — ${formatPrice(product.price * quantity)}`;
-      list.append(item);
-    });
-
-    cartItems.append(list);
-  }
-
-  const quantityTotal = Object.values(cart).reduce((sum, quantity) => sum + quantity, 0);
-  const priceTotal = products.reduce(
-    (sum, product) => sum + product.price * (cart[product.id] || 0),
-    0
-  );
-
-  cartCount.textContent = quantityTotal;
-  cartTotal.textContent = formatPrice(priceTotal);
-}
-
-showProducts();
-showCart();
