@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase | Online Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ShopEase</h1>
+    <p>Your everyday online store</p>
+    <button id="cart-button">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Discover Your Next Favorite</h2>
+      <p>Explore products you'll love.</p>
+    </section>
+
+    <section>
+      <h2>Featured Products</h2>
+      <div id="product-list" class="products"></div>
+    </section>
+
+    <section class="cart-section">
+      <h2>Your Shopping Cart</h2>
+      <div id="cart-items">Your cart is empty.</div>
+      <h3>Total: <span id="cart-total">TSh 0</span></h3>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ShopEase. Demo store.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+const products = [
+  { id: 1, name: "T-shirt", description: "T-shirt ya cotton", price: 25000 },
+  { id: 2, name: "Headphones", description: "Headphones za ubora", price: 45000 },
+  { id: 3, name: "Backpack", description: "Beg ya mgongoni", price: 60000 }
+];
+
+const productList = document.querySelector("#product-list");
+const cartItems = document.querySelector("#cart-items");
+const cartCount = document.querySelector("#cart-count");
+const cartTotal = document.querySelector("#cart-total");
+
+const cart = {};
+
+function formatPrice(amount) {
+  return `TSh ${amount.toLocaleString("en-TZ")}`;
+}
+
+function showProducts() {
+  products.forEach((product) => {
+    const card = document.createElement("article");
+    card.className = "product-card";
+
+    const name = document.createElement("h3");
+    name.textContent = product.name;
+
+    const description = document.createElement("p");
+    description.textContent = product.description;
+
+    const price = document.createElement("p");
+    price.textContent = formatPrice(product.price);
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "Ongeza kwenye kikapu";
+    button.addEventListener("click", () => addToCart(product.id));
+
+    card.append(name, description, price, button);
+    productList.append(card);
+  });
+}
+
+function addToCart(productId) {
+  cart[productId] = (cart[productId] || 0) + 1;
+  showCart();
+}
+
+function showCart() {
+  cartItems.replaceChildren();
+
+  const cartProducts = products.filter((product) => cart[product.id]);
+
+  if (cartProducts.length === 0) {
+    cartItems.textContent = "Kikapu chako ni tupu.";
+  } else {
+    const list = document.createElement("ul");
+
+    cartProducts.forEach((product) => {
+      const quantity = cart[product.id];
+      const item = document.createElement("li");
+      item.textContent =
+        `${product.name} × ${quantity} — ${formatPrice(product.price * quantity)}`;
+      list.append(item);
+    });
+
+    cartItems.append(list);
+  }
+
+  const quantityTotal = Object.values(cart).reduce((sum, quantity) => sum + quantity, 0);
+  const priceTotal = products.reduce(
+    (sum, product) => sum + product.price * (cart[product.id] || 0),
+    0
+  );
+
+  cartCount.textContent = quantityTotal;
+  cartTotal.textContent = formatPrice(priceTotal);
+}
+
+showProducts();
+showCart();
