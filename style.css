@@ -806,3 +806,31 @@ button {
     width: 155px;
   }
 }
+
+/* ShopEase logo sizing on all pages */
+.site-header .brand-logo,
+.site-footer .brand-logo,
+.legal-page .brand-logo {
+  display: block;
+  width: 165px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Keep logo aligned correctly */
+.site-header .brand,
+.site-footer .brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Smaller logo on mobile screens */
+@media (max-width: 480px) {
+  .site-header .brand-logo,
+  .site-footer .brand-logo,
+  .legal-page .brand-logo {
+    width: 135px;
+  }
+}
