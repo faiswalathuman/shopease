@@ -1,10 +1,11 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover useful everyday products with ShopEase.">
+  <meta name="description" content="Discover useful everyday products with ShopEase. Explore thoughtfully and make informed shopping decisions.">
+  <meta name="theme-color" content="#142b2a">
   <title>ShopEase | Discover Better Everyday</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,12 +16,17 @@
   </div>
 
   <header class="site-header">
-    <a class="brand" href="#home">Shop<span>Ease</span></a>
+    <a class="brand" href="index.html" aria-label="ShopEase Home">
+      Shop<span>Ease</span>
+    </a>
 
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="#products">Discover</a>
       <a href="#about">About Us</a>
       <a href="#disclosure">Affiliate Disclosure</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms</a>
     </nav>
 
     <button id="cart-button" type="button">
@@ -110,6 +116,13 @@
         on this preview website are examples and should not be treated
         as live offers.
       </p>
+
+      <p>
+        Questions? Visit our <a href="contact.html">Contact Us</a> page.
+        You can also review our
+        <a href="privacy.html">Privacy Policy</a> and
+        <a href="terms.html">Terms of Use</a>.
+      </p>
     </section>
 
     <section class="disclosure-section" id="disclosure">
@@ -118,9 +131,10 @@
       <p>
         ShopEase may earn a commission when visitors purchase products
         through qualifying affiliate links, at no additional cost to them.
-        We will identify affiliate links clearly. At present, this preview
-        website does not contain verified AliExpress affiliate links.
-        Product examples and prices are for demonstration only.
+        Any affiliate links will be clearly identified.
+        This preview website currently does not contain verified
+        AliExpress affiliate links. Product examples and prices are
+        for demonstration only.
       </p>
     </section>
 
@@ -148,14 +162,19 @@
   <div id="cart-backdrop" class="cart-backdrop" hidden></div>
 
   <footer class="site-footer">
-    <a class="brand" href="#home">Shop<span>Ease</span></a>
+    <a class="brand" href="index.html" aria-label="ShopEase Home">
+      Shop<span>Ease</span>
+    </a>
 
     <p>Discover. Explore. Choose thoughtfully.</p>
 
-    <div>
-      <a href="#about">About Us</a>
-      <a href="#disclosure">Affiliate Disclosure</a>
-      <a href="#products">Products</a>
+    <div class="footer-links">
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#disclosure">Affiliate Disclosure</a>
+      <a href="index.html#products">Products</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="terms.html">Terms of Use</a>
     </div>
 
     <small>
@@ -166,3 +185,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+```
