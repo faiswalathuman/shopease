@@ -787,3 +787,22 @@ button {
   }
 }
 ```
+.brand-logo {
+  display: block;
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+}
+
+.site-header .brand,
+.site-footer .brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    width: 155px;
+  }
+}
