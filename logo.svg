@@ -1,0 +1,28 @@
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160" viewBox="0 0 600 160" role="img" aria-labelledby="title desc">
+  <title id="title">ShopEase</title>
+  <desc id="desc">ShopEase premium logo in deep green and gold.</desc>
+
+  <rect x="8" y="12" width="136" height="136" rx="30" fill="#142b2a"/>
+
+  <path d="M42 55 L42 43 Q42 35 51 35 L101 35 Q110 35 110 43 L110 55"
+        fill="none" stroke="#c69b5b" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M37 55 H115 L107 112 Q106 120 98 120 H54 Q46 120 45 112 Z"
+        fill="none" stroke="#f7f5ef" stroke-width="5" stroke-linejoin="round"/>
+
+  <text x="76" y="91" font-family="Georgia, serif" font-size="31"
+        font-weight="bold" text-anchor="middle" fill="#c69b5b">SE</text>
+
+  <text x="168" y="88" font-family="Georgia, serif" font-size="55"
+        font-weight="bold" fill="#142b2a">Shop</text>
+
+  <text x="317" y="88" font-family="Georgia, serif" font-size="55"
+        font-weight="bold" fill="#c69b5b">Ease</text>
+
+  <path d="M171 106 H475" stroke="#477d70" stroke-width="2"/>
+
+  <text x="171" y="132" font-family="Arial, sans-serif" font-size="14"
+        letter-spacing="4" fill="#477d70">DISCOVER SOMETHING GOOD</text>
+</svg>
+```
