@@ -873,3 +873,44 @@ button {
     width: 135px;
   }
 }
+
+/* ShopEase text-only brand */
+.site-header .brand,
+.site-footer .brand,
+.legal-page .brand {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: none;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #142b2a;
+}
+
+.site-header .brand span,
+.site-footer .brand span,
+.legal-page .brand span {
+  color: #c69b5b;
+}
+
+.site-header .brand-logo,
+.site-footer .brand-logo,
+.legal-page .brand-logo {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .site-header .brand,
+  .site-footer .brand,
+  .legal-page .brand {
+    font-size: 24px;
+  }
+}
