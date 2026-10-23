@@ -946,3 +946,15 @@ button {
 .legal-page .brand span {
   color: #FFD700 !important;
 }
+
+/* ShopEase price: bold red */
+.product-price {
+  color: #e00000 !important;
+  font-weight: 800 !important;
+}
+
+/* Buy Now: bold dark green */
+.product-info .btn {
+  color: #123d24 !important;
+  font-weight: 800 !important;
+}
