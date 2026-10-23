@@ -950,11 +950,11 @@ button {
 /* ShopEase price: bold red */
 .product-price {
   color: #e00000 !important;
-  font-weight: 800 !important;
+  font-weight: 1000 !important;
 }
 
 /* Buy Now: bold dark green */
 .product-info .btn {
   color: #123d24 !important;
-  font-weight: 800 !important;
+  font-weight: 1000 !important;
 }
