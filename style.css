@@ -914,3 +914,17 @@ button {
     font-size: 24px;
   }
 }
+
+/* ShopEase brand - gold text for better contrast */
+.site-header .brand,
+.site-footer .brand,
+.legal-page .brand {
+  color: #FFD700 !important;
+  text-decoration: none;
+}
+
+.site-header .brand span,
+.site-footer .brand span,
+.legal-page .brand span {
+  color: #FFD700 !important;
+}
