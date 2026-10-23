@@ -923,6 +923,24 @@ button {
   text-decoration: none;
 }
 
+/* Make ShopEase product images larger */
+.product-image {
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.15);
+}
+
 .site-header .brand span,
 .site-footer .brand span,
 .legal-page .brand span {
