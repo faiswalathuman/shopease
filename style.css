@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
 
 :root {
-  --navy: #142b2a;
+  --sugar: #f1f8dd;
   --teal: #477d70;
-  --cream: #f7f5ef;
-  --white: #ffffff;
+  --lemon: #ecbc6b;
+  --white: #f7efda;
   --text: #243330;
   --muted: #697773;
   --line: #e3e7e1;
-  --gold: #c69b5b;
+  --green: #0f372f;
   --shadow: 0 18px 45px rgba(20, 43, 42, 0.09);
 }
 
@@ -43,8 +43,8 @@ button {
 
 .announcement {
   padding: 9px 16px;
-  background: var(--navy);
-  color: #f8f4e9;
+  background: var(--sugar);
+  color: #f1f8dd;
   text-align: center;
   font-size: 10px;
   font-weight: 700;
@@ -953,8 +953,8 @@ button {
   font-weight: 1000 !important;
 }
 
-/* Buy Now: bold dark green */
+/* Buy Now: bold mandarin orange */
 .product-info .btn {
-  color: #123d24 !important;
+  color: #eb6637 !important;
   font-weight: 1000 !important;
 }
