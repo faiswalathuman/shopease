@@ -973,7 +973,7 @@ button {
 /* Main background */
 body {
   background: var(--shop-cream);
-  color: #172b27;
+  color: #f3e8bc;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -1081,7 +1081,7 @@ nav a:hover,
   font-weight: 800 !important;
 }
 
-/* Buy Now: bold dark green */
+/* Buy Now: bold latte froth */
 .product-info .btn,
 .product-info a.btn {
   display: inline-block;
